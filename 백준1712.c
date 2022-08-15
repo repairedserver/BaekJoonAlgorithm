@@ -1,10 +1,14 @@
 #include <stdio.h>
 int main() {
-	int gibon, suik, biyong;
+	int m, n, s = 0, min = 1000;
+	scanf("%d %d", &m, &n);
 
-	scanf("%d %d %d", &gibon, &suik, &biyong);
-
-	if (suik >= biyong) printf("-1\n");
-	else printf("%d\n", gibon / (biyong - suik) + 1);
+	for (int i = 1; i * i <= n; i++) {
+		s += i * i;
+		if (i * i < min) {
+			min = i * i;
+		}
+	}
+	printf("%d\n%d", s, min);
 	return 0;
 }
