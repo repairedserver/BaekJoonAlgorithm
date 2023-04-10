@@ -1,2 +1,1 @@
-n = int(input(), 2)
-print(format(n, 'o'))
+print(format(int(input(), 2), 'o'))
