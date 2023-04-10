@@ -1,11 +1,7 @@
-from sys import stdin
-jin = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-n, b = map(int, stdin.readline().split())
-ans =''
-
+a = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+n, b = map(int, input().split())
+ans = ''
 while n != 0:
-    ans += str(jin[n%b])
+    ans += a[n % b]
     n = n // b
-    
 print(ans[::-1])
