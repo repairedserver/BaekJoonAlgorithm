@@ -1,6 +1,2 @@
 n = int(input())
-c = 0
-while n != 0:
-    n //= 5
-    c += n
-print(c)
+print(n//5+n//25+n//125)
