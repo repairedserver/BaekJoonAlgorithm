@@ -1,5 +1,7 @@
 import sys
 sys.setrecursionlimit(99999)
+input = sys.stdin.readline
+
 n = int(input())
 tree = [[] for i in range(n+1)]
 visited = [-1] * (n+1)
