@@ -1,27 +1,18 @@
 import sys
 input = sys.stdin.readline
-def s(n):
-    if n == 1:
-        return False
-    for i in range(2, int(n**0.5) + 1):
-        if n % i == 0:
-            return False
-    return True	
-
-n = int(input())
-a = [i for i in range(2, 246912)]
-m = []
-
-for i in a:					
-    if s(i):	
-        m.append(i)
-
+num = [True for i in range(246913)]
+for i in range(2, int(246912**0.5)+1):
+            for j in range(i*2, 246913, i):
+                num[j] = False
 while True:
-    cnt = 0
-    if n == 0 :
-            break
-    for i in m:
-        if n < i <= 2 * n:
-            cnt += 1
     n = int(input())
-    print(cnt)
+    if n == 0:
+        break
+    elif n == 1:
+        print(1)
+    else:
+        cnt = 0
+        for i in range(n+1, (2*n)+1, 1):
+            if num[i] == True:
+                cnt += 1
+        print(cnt)
