@@ -1,3 +1,5 @@
+import sys
+input = sys.stdin.readline
 def s(n):
     if n == 1:
         return False
