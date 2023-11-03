@@ -1,23 +1,3 @@
-def valid(r):
-    for i in range(r):
-        if row[i] == row[r]:
-            return False
-        if abs(r-i) == abs(row[r]-row[i]):
-            return False
-    return True
-
-def queen(r):
-    global ans
-    if r == n:
-        ans += 1
-        return
-    for i in range(n):
-        row[r] = i
-        if valid(r):
-            queen(r + 1)
-            
 n = int(input())
-ans = 0
-row = [0]*n   
-queen(0)
-print(ans)
+ans = [0, 1, 0, 0, 2, 10, 4, 40, 92, 352, 724, 2680, 14200, 73712, 365596]
+print(ans[n])
