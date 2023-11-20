@@ -1,4 +1,5 @@
-n = int(input())
+import sys
+input = sys.stdin.readline
 
 def add(n):
     if n == 1:
@@ -10,6 +11,5 @@ def add(n):
     else:
         return add(n-1) + add(n-2) + add(n-3)
     
-for i in range(n):
-    num = int(input())
-    print(add(num))
+for i in range(int(input())):
+    print(add(int(input())))
