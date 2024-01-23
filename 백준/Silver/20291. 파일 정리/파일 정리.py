@@ -1,11 +1,13 @@
-dic = dict()
-for i in range(int(input())):
-    n = (input().split('.'))[1]
-    if not n in dic:
-        dic[n] = 1
-    else:
-        dic[n] += 1
+import sys
+input = sys.stdin.readline
+dic = {}
 
-srt = sorted(dic.items())
-for i, j in srt:
-    print(i, j)
+for i in range(int(input())):
+    n = (input().rstrip().split("."))[1]
+    dic[n] = dic.get(n, 0) + 1
+
+srt = sorted(dic)
+  
+for i in range(len(srt)):
+    e = srt[i]
+    print(e, dic[e])
